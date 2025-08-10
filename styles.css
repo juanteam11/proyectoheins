@@ -530,58 +530,321 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Mobile First - Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: 0.8rem 0;
+    }
+    
     .nav-container {
         flex-direction: column;
         gap: 1rem;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .logo-img {
+        height: 60px;
+    }
+    
+    .company-name {
+        font-size: 1.8rem;
     }
     
     .nav-menu {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
     }
     
+    .nav-menu a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Section */
     .hero {
-        padding: 140px 0 60px;
+        padding: 120px 0 40px;
         text-align: center;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        padding: 0 15px;
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
     
     .cta-buttons {
         flex-direction: column;
+        gap: 0.8rem;
         align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .construction-graphic {
+        width: 250px;
+        height: 160px;
+        margin: 1.5rem auto;
+    }
+    
+    /* Services Section */
+    .services {
+        padding: 60px 0;
+    }
+    
+    .services h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    /* About Section */
+    .about {
+        padding: 60px 0;
+    }
+    
+    .about h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-content {
+        padding: 0 10px;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    /* Projects Section */
+    .projects {
+        padding: 60px 0;
+    }
+    
+    .projects h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        margin: 0 10px;
+    }
+    
+    .project-info {
+        padding: 1.2rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-info p {
+        font-size: 0.9rem;
+    }
+    
+    /* Contact Section */
+    .contact {
+        padding: 60px 0;
+    }
+    
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
     
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 0 10px;
     }
     
+    .contact-info {
+        gap: 1.5rem;
+    }
+    
+    .contact-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.95rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Footer */
     .footer-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         text-align: center;
+        padding: 0 15px;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+        order: 1;
+    }
+    
+    .footer-logo .logo-img {
+        height: 50px;
+    }
+    
+    .footer-logo .company-name {
+        font-size: 1.5rem;
     }
     
     .footer-social {
         align-items: center;
+        order: 2;
     }
     
     .footer-center {
         order: 3;
     }
     
-    .footer-social {
-        order: 2;
+    .footer-text p {
+        font-size: 0.9rem;
+    }
+    
+    .social-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
     
     .stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    
+    .footer-content {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-social {
+        align-items: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -625,6 +888,53 @@ section {
 .service-card,
 .project-card {
     animation: fadeInUp 0.6s ease-out;
+}
+
+/* Mobile touch enhancements */
+* {
+    -webkit-tap-highlight-color: rgba(255, 215, 0, 0.3);
+    -webkit-touch-callout: none;
+}
+
+button, a, .service-card, .project-card {
+    -webkit-tap-highlight-color: rgba(255, 215, 0, 0.3);
+    tap-highlight-color: rgba(255, 215, 0, 0.3);
+}
+
+/* Ensure minimum touch target size on mobile */
+@media (max-width: 768px) {
+    button, .nav-menu a, .social-link {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-menu a {
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improved focus states for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-yellow);
+    outline-offset: 2px;
+}
+
+/* Better mobile form styling */
+@media (max-width: 576px) {
+    input, textarea, button {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
 }
 
 /* Scrollbar styling */
